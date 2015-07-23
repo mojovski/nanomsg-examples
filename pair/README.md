@@ -2,15 +2,31 @@
 
 ## Install
 
+```
 git clone https://github.com/tonysimpson/nanomsg-python.git
 cd nanomsg-python
 python setup.py build
+```
 if everything is fine:
+```
 sudo python setup.py install
-echo $LD_LIBRARY_PATH must not be empty. call
+```
+
+There is an issue with the updates on the libraries in Ubuntu.
+You can verify this by calling
+```
+echo $LD_LIBRARY_PATH 
+```
+which must not be empty. 
+If so, call
+```
 export LD_LIBRARY_PATH=/usr/local/lib
+```
 or
+```
 sudo ldconfig
+```
+to fix this.
 
 
 ## 
