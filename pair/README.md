@@ -45,13 +45,13 @@ make
 ```
 ./pair tcp://127.0.0.1:49234 
 ```
-or 
+or for shared memory transmission:
 ```
 ./pair ipc:///tmp/pipeline.ipc
 ```
 
 3. run the listening python example
 ```
-python listener.py
+python listener.py ipc:///tmp/pipeline.ipc
 ```
 
