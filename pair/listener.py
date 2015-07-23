@@ -22,8 +22,11 @@ while receiver.is_open():
 	res=receiver.recv()
 
 	print ("check: \""+res+"\"")
-	obj=json.loads(str(res)[:-1]) #remove the last element, which is \0
-	print ("object: "+str(obj))
+	try:
+		obj=json.loads(str(res)[:-1]) #remove the last element, which is \0
+		print ("object: "+str(obj))
+	except: 
+		print "The received string is not a json object."
 	time.sleep(1) #seconds
 
 receiver.close()

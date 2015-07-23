@@ -1,6 +1,4 @@
-#---------
 # Python
-#--------
 
 ## Install
 
@@ -17,19 +15,27 @@ sudo ldconfig
 
 ## 
 
-#------------
-# C code
-#-----------
+## C module
 
 
-1. compile: make
+1. compile: 
+
+```
+make
+```
+
 
 2. run the sending instance:
-./pair tcp://127.0.0.1:49234 & node0=$! && sleep 1
+```
+./pair tcp://127.0.0.1:49234 
+```
+or 
+```
+./pair ipc:///tmp/pipeline.ipc
+```
 
 3. run the listening python example
+```
 python listener.py
+```
 
-
-4. kill the listening instance
-kill $node0 
